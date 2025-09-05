@@ -21,7 +21,10 @@ Run `mobile/examples/image_classification/android/prepare_models.py` to download
 
 ```bash
 cd mobile/examples/image_classification/android  # cd to this directory
-python -m pip install -r ./prepare_models.requirements.txt
+uv venv --python 3.10
+# other active script if in other platform
+.\.venv\Scripts\activate.ps1
+uv pip install -r ./prepare_models.requirements.txt
 python ./prepare_models.py --output_dir ./app/src/main/res/raw
 ```
 
